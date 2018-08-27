@@ -1,0 +1,15 @@
+function powerSet(set) {
+  const set_size = set.length;
+  const powet_set_size = Math.pow(2, set_size)
+  for (let i = 0; i < powet_set_size; i++) {
+    let res = [];
+    for (let j = 0; j < set_size; j++) {
+      if (i & (1 << j)) {      
+        res.push(set[j]);
+      }
+    }
+    console.log(res);
+  }
+}
+
+powerSet(['a', 'b', 'c']);
